@@ -4,6 +4,16 @@
 
 直接点击绿色的`Use this template`创建自己名称的项目，workers反代与pages反代及自定义域，配置文件信息等相关操作拓展教程，请关注：[博客视频教程](https://ygkkk.blogspot.com/2022/05/heroku-cloudflare-workers-pages.html)
 
+## 注意事项
+
+0）**最新** Cloudflare Page域名还没被SNI阻断，利用[此项目](https://github.com/xyTom/cf-page-func-proxy)可利用CF Pages反代。（无需自定义域名）
+
+1）2022年5月8日晚，CloudFlare Workers 的业务域名 Workers.dev 被防火长城 DNS 污染、SNI阻断。
+
+2）CloudFlare Workers，可自定义workers域名；经过添加自定义域名，更换Host和SNI后已可正常使用。
+
+3）接入点可以直接使用我的自选IP域名`uicdn.cf`，每30分钟更新一次。
+
 ### CloudFlare Workers反代代码（可分别用两个账号的应用程序名（`协议`、`UUID`保持一致），单双号天分别执行，那一个月就有550+550小时（每个账号一个月免费使用550小时））
 <details>
 <summary>CloudFlare Workers单账户反代代码</summary>
